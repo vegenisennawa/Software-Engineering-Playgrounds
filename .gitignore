@@ -1,0 +1,7 @@
+# Ignorar compilaciones de Swift y Windows
+.build/
+*.exe
+*.dll
+*.pdb
+.DS_Store
+.vs/
