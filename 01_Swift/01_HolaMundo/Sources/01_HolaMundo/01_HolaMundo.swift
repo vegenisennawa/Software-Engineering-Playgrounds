@@ -15,10 +15,11 @@ struct HolaMundo {
 
         //Primer ejercicio.
         let nombre: String = "Paulina"
-        let edad: Int = 37
+        //let edad: Int = 37
         let profesion: String = "Desarrollador"
+        let ciudad: String = "Guadalajara"
 
-        print("¡Hola! Mi nombre es \(nombre), tengo \(edad) y trabajo como \(profesion).")
+        print("¡Hola! Mi nombre es \(nombre), trabajo como \(profesion) en \(ciudad).")
 
         ejerciciosCompletados += 1
         print("¡Avanzando! Ejercicios listos: \(ejerciciosCompletados)")
