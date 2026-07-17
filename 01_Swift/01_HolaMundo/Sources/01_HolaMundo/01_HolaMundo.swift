@@ -23,12 +23,43 @@ struct HolaMundo {
 
         print("¡Hola! Mi nombre es \(nombre), trabajo como \(profesion) en \(ciudad).")*/
 
-        var monto = 150.0
+        var monto : Double = 0.0
         let porcentajePropina = 0.15
-        let propina = monto * porcentajePropina
-        let montoTotal = monto + propina
+       
+        print("Ingrese el monto a pagar: ", terminator: "")
 
-        print("El monto de la propina es de \(propina.formatted(.currency(code: "MXN"))), y el monto total a pagar es de \(String(format: "$%.2f MXN", montoTotal))")
+        if let input = readLine(), let montoIngresado = Double(input) {
+            monto = montoIngresado
+
+            if monto == 0 {
+                print("El monto no puede ser cero.")
+            }
+            else if monto < 0 {
+                print("El monto no puede ser un valor negativo.")
+            }
+            else
+            {
+                let propina = monto * porcentajePropina
+                let montoTotal = monto + propina
+                print("El monto de la propina es de \(propina.formatted(.currency(code: "MXN"))), y el monto total a pagar es de \(String(format: "$%.2f MXN", montoTotal))")
+            } 
+        } 
+        else {
+            print("No se ingresó un monto válido.")
+        }
+
+/*
+if let input = readLine() {
+    print("Hello, \(input)!")
+}
+*/
+
+/*
+if let input = readLine(), let age = Int(input) {
+    print("Next year you will be \(age + 1).")
+} else {
+    print("Invalid number entered.")
+}*/
 
         ejerciciosCompletados += 1
         print("¡Avanzando! Ejercicios listos: \(ejerciciosCompletados)")
