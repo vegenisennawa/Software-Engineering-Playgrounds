@@ -1,5 +1,6 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
+import Foundation
 
 /*
 Multicomentario
@@ -13,13 +14,21 @@ struct HolaMundo {
         //Contador de ejercicios completados.
         var ejerciciosCompletados = 0
 
+        /*
         //Primer ejercicio.
         let nombre: String = "Paulina"
         //let edad: Int = 37
         let profesion: String = "Desarrollador"
         let ciudad: String = "Guadalajara"
 
-        print("¡Hola! Mi nombre es \(nombre), trabajo como \(profesion) en \(ciudad).")
+        print("¡Hola! Mi nombre es \(nombre), trabajo como \(profesion) en \(ciudad).")*/
+
+        var monto = 150.0
+        let porcentajePropina = 0.15
+        let propina = monto * porcentajePropina
+        let montoTotal = monto + propina
+
+        print("El monto de la propina es de \(propina.formatted(.currency(code: "MXN"))), y el monto total a pagar es de \(String(format: "$%.2f MXN", montoTotal))")
 
         ejerciciosCompletados += 1
         print("¡Avanzando! Ejercicios listos: \(ejerciciosCompletados)")
